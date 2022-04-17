@@ -15,3 +15,4 @@ for i in range (0,n):
         square(i,j,n)
     print()
 """
+n = int(input())
