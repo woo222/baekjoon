@@ -18,4 +18,5 @@ num = int(input())
 stack = []
 for i in range(num):
     com = input()
-    if
+    if ():
+        
