@@ -1,3 +1,5 @@
+"""
+# 시간초과
 def square (i, j, N):
     if((i//N)%3==1 and (j//N)%3==1):
         print(" ", end='')
@@ -12,3 +14,4 @@ for i in range (0,n):
     for j in range(0,n):
         square(i,j,n)
     print()
+"""
