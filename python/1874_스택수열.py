@@ -1,28 +1,23 @@
 n = int(input())
 stack = []
-num = []
 result = []
 item = 1
 
 for i in range(n):
-    num.append(int(input()))
+    num = int(input())
 
-for i in range(n):
+    while (True):
     # num이 스택에 없으며 있을 때 까지 +(push)
-    while (num[i] not in stack):
-        if ("NO" in result): break
-        stack.append(item)
-        result.append('+')
-        item += 1
-
-    # num이 stack에 있으면 없어질 때까지 pop
-    while (num[i] in stack):
-        if(stack.pop() != num[i]):
+        if(item <= num):
+            stack.append(item)
+            result.append('+')
+            item += 1
+        elif(stack.pop() != num):
             result.append('NO')
             break
         else:
-            if ("NO" in result): break
             result.append('-')
+            break
         
 if ("NO" in result):
     print('NO')
