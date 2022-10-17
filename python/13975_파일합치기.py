@@ -7,11 +7,14 @@ for i in range(T):
     page = list(map(int, input().split()))
 
     for j in range(k-1):
-        page.sort()
         if(len(page)==1):
             sum = page.pop(0)
         else:
-            sum = page.pop(0) + page.pop(0)
+            a = min(page)
+            page.remove(a)
+            b = min(page)
+            page.remove(b)
+            sum = a + b
         total += sum
         page.append(sum)
 
