@@ -1,3 +1,5 @@
+from heapq import heappush, heappop, heapify
+
 result = []
 T = int(input())
 
@@ -5,18 +7,15 @@ for i in range(T):
     total = 0
     k = int(input())
     page = list(map(int, input().split()))
+    heapify(page)
 
     for j in range(k-1):
         if(len(page)==1):
-            sum = page.pop(0)
+            sum = heappop(page)
         else:
-            a = min(page)
-            page.remove(a)
-            b = min(page)
-            page.remove(b)
-            sum = a + b
+            sum = heappop(page)+ heappop(page)
         total += sum
-        page.append(sum)
+        heappush(page, sum)
 
     result.append(total)
 
