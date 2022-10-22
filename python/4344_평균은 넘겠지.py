@@ -4,6 +4,7 @@ for i in range(n):
     sum = 0
     count = 0
     score = list(map(int, input().split()))
+    score = list(map(int, input().split()))
 
     for j in range(score[0]):
         sum += score[j+1]
