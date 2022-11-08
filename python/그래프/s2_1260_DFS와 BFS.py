@@ -3,7 +3,7 @@ from collections import deque
 n, m, v = map(int, input().split())
 lst = [[] for _ in range(n+1)]
 visit_d = [0] * (n+1)
-dfs_q = []
+bfs_q = []
 
 for i in range(m):
     a, b = map(int, input().split())
@@ -23,19 +23,19 @@ def dfs(start):
             dfs(i)
 
 def bfs(start):
-    dfs_q = deque([start])
+    bfs_q = deque([start])
     visit_b = [0] * (n+1)
 
     visit_b[start] = 1
 
-    while(dfs_q):
-        find = dfs_q.popleft()
+    while(bfs_q):
+        find = bfs_q.popleft()
 
         print(find, end=' ')
 
         for i in lst[find]:
             if(visit_b[i] == 0):
-                dfs_q.append(i)
+                bfs_q.append(i)
                 visit_b[i] = 1
         
 dfs(v)
