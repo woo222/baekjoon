@@ -1,21 +1,5 @@
 from collections import deque
 
-def bfs (start):
-    bfs_q = deque([start])
-    visit_b = [0] * (n+1)
-
-    visit_b[start] = 1
-
-    while(bfs_q):
-        find = bfs_q.popleft()
-
-        print(find, end=' ')
-
-        for i in lst[find]:
-            if(visit_b[i] == 0):
-                bfs_q.append(i)
-                visit_b[i] = 1
-
 n, m = map(int, input().split())
 maze = []
 
