@@ -22,7 +22,7 @@ for i in range(m):
     dList[b].append(a)
 
 # 내림차순 정렬
-for i in range(len(dList)):
+for i in range(1, n+1):
     dList[i].sort(reverse=True)
 
 dfs(r)
