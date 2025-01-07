@@ -8,4 +8,3 @@ for _ in range(m):
 
 for k in range(n):
     print(basket[k] + 1, end=' ')
-
